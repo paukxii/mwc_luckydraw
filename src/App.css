@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .label {
+        @apply block font-thin text-2xl py-2
+    }
+    .input {
+        @apply w-full outline-none p-2 font-bold text-2xl
+    }
+    .submit {
+        @apply py-4 px-8 bg-blue-400 text-white font-semibold rounded-lg cursor-pointer
+    }
+    .submit:hover {
+        @apply bg-white text-blue-500 
+    }
+    .nav-btn {
+        @apply p-2 font-semibold text-xl uppercase text-gray-800
+    }
+    .nav-btn:hover {
+        @apply text-blue-500
+    }
+}

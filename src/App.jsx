@@ -1,11 +1,21 @@
 
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import DataEntryPage from './components/DataEntryPage';
+import DataPage from './components/DataPage';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="text-3xl text-blue-500 font-thin">
-     <h1>Hello World</h1>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/add" element={<DataEntryPage />} />
+        <Route path="/all" element={<DataPage />} />
+      </Routes>
+    </>
   );
 }
 
